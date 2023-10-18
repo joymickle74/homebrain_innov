@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis - HomeBrain Innovations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Additional styling for table */
+        .data {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .data th, .data td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .data th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="home-header">
+        <div class="logo-container">
+            <img src="/static/images/logo.png" alt="Logo" id="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/analysis" class="active">Analysis</a></li>
+                <li><a href="/find_deals" class="active">Find Deals</a></li>
+                <li><a href="/performance_metrics" class="active">Metrics</a></li>
+                <li><a href="/feature_importances" class="active">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="analysis-section">
+            <h1 class="centered-title">Feature Importances</h1>
+            {{ graph | safe }}
+        </section>
+        <section class="analysis-section">
+            <h1 class="centered-title">Model Performance Metrics</h1>
+            <p>Mean Absolute Error: {{ mae }}</p>
+            <p>Mean Squared Error: {{ mse }}</p>
+            <p>Root Mean Squared Error: {{ rmse }}</p>
+            <p>R-squared: {{ r2 }}</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 HomeBrain Innovations</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Deals - HomeBrain Innovations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="home-header">
+        <div class="logo-container">
+            <img src="/static/images/logo.png" alt="Logo" id="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/analysis" class="active">Analysis</a></li>
+                <li><a href="/find_deals" class="active">Find Deals</a></li>
+                <li><a href="/performance_metrics" class="active">Metrics</a></li>
+                <li><a href="/feature_importances" class="active">Features</a></li>  <!-- Added this line for the new page -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="deals-container">
+        <h1 class="centered-title colored-text">Find the Best Deals in Las Vegas</h1>
+        <form method="post" class="deals-form">
+            <div class="form-group">
+                <label for="budget" class="colored-text">Investment Budget:</label>
+                <input type="text" id="budget" name="budget" required>
+            </div>
+            <input type="submit" value="Find Deals" class="submit-btn colored-text">
+        </form>
+    </main>
+        
+    </main>
+    <footer>
+        <p>&copy; 2023 HomeBrain Innovations</p>
+    </footer>
+</body>
+</html>
